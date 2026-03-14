@@ -1,11 +1,11 @@
 :root {
-    --bg-color: #ffffff;
-    --text-primary: #202124;
-    --text-secondary: #5f6368;
-    --border-color: #dadce0;
-    --accent-blue: #1a73e8;
-    --accent-hover: #1557b0;
-    --btn-bg-hover: #f8f9fa;
+    --bg-color:rgb(24, 24, 24);
+    --text-primary:rgb(129, 250, 76);
+    --text-secondary: rgb(121, 169, 120);
+    --border-color: rgb(218, 220, 224);
+    --accent-blue: rgb(121, 169, 120);
+    --accent-hover: rgb(206, 22, 22);
+    --btn-bg-hover: rgb(18, 18, 18);
 }
 
 * {
@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'SF Mono', 'SFMono-Regular', ui-monospace, Menlo, Monaco, 'Roboto Mono', 'Segoe UI Mono', monospace;
     background-color: var(--bg-color);
     color: var(--text-primary);
     line-height: 1.6;
