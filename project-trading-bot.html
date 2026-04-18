@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinforcement Learning Trading Bot | Matteo Negri</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detail-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        .project-header {
+            margin-bottom: 48px;
+        }
+
+        .project-header h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .content-block {
+            margin-bottom: 48px;
+        }
+
+        .content-block h2 {
+            font-size: 20px;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(129, 250, 76, 0.1);
+        }
+
+        .project-img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(129, 250, 76, 0.1);
+            margin: 24px 0;
+            display: block;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        .info-card {
+            background: rgba(129, 250, 76, 0.03);
+            border: 1px solid rgba(129, 250, 76, 0.1);
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .info-card span {
+            display: block;
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .info-card strong {
+            font-size: 18px;
+            color: var(--text-primary);
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .tech-tag {
+            background: rgba(129, 250, 76, 0.08);
+            color: var(--text-primary);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            background: var(--text-primary);
+            color: var(--bg-color);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 24px;
+            transition: opacity 0.2s;
+        }
+
+        .github-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container detail-page">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+        <header class="project-header">
+            <h1>Reinforcement Learning Trading Bot</h1>
+        </header>
+
+        <section class="content-block">
+            <h2>Performance Results</h2>
+            <img src="data/python trading bot.png" alt="RL Trading Bot Chart" class="project-img">
+            <p>The agent was tested on unseen data and achieved highly promising results, demonstrating an ability to
+                capture profitable trends while managing risk.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <span>Return on Test Data</span>
+                    <strong>12.5%</strong>
+                </div>
+                <div class="info-card">
+                    <span>Initial Portfolio</span>
+                    <strong>$10,000</strong>
+                </div>
+                <div class="info-card">
+                    <span>Final Value</span>
+                    <strong>$11,250.96</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-block">
+            <h2>How It Works</h2>
+            <p>The bot utilizes a Deep Reinforcement Learning approach, specifically the Proximal Policy Optimization
+                (PPO) algorithm. It analyzes a variety of technical indicators to decide whether to Buy, Hold, or Sell
+                at any given time step.</p>
+            <ul>
+                <li><strong>Observation Space</strong>: 50 days of historical price data combined with RSI, MACD, and
+                    Bollinger Bands.</li>
+                <li><strong>Reward Function</strong>: Optimized for long-term portfolio growth adjusted for drawdown.
+                </li>
+                <li><strong>Environment</strong>: Custom OpenAI Gym (Gymnasium) environment simulated on years of
+                    historical stock market data.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Technical Methodology</h2>
+            <ul>
+                <li><strong>PPO Algorithm</strong>: Stable-Baselines3 implementation for robust and stable policy
+                    updates.</li>
+                <li><strong>Indicators</strong>: Integrated technical analysis signals (SMA/EMA50, RSI, MACD).</li>
+                <li><strong>Data Source</strong>: High-resolution historical data fetched via the <code>yfinance</code>
+                    API.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Stack & Requirements</h2>
+            <ul class="tech-list">
+                <li class="tech-tag">Python</li>
+                <li class="tech-tag">Stable-Baselines3</li>
+                <li class="tech-tag">Gymnasium</li>
+                <li class="tech-tag">yfinance</li>
+                <li class="tech-tag">Pandas</li>
+                <li class="tech-tag">Matplotlib</li>
+            </ul>
+        </section>
+
+        <footer style="margin-top: 80px; padding-top: 24px; border-top: 1px solid rgba(129, 250, 76, 0.1);">
+            <a href="https://github.com/MN012/Python-Reinforcement-Learning-Trading-Bot" target="_blank"
+                class="github-btn">View Full Project on GitHub</a>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-top: 24px;">License: MIT</p>
+        </footer>
+    </div>
+</body>
+
+</html>

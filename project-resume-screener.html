@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Screener | Matteo Negri</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detail-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        .project-header {
+            margin-bottom: 48px;
+        }
+
+        .project-header h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .content-block {
+            margin-bottom: 48px;
+        }
+
+        .content-block h2 {
+            font-size: 20px;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(129, 250, 76, 0.1);
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin-top: 24px;
+        }
+
+        .tech-tag {
+            background: rgba(129, 250, 76, 0.08);
+            color: var(--text-primary);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            background: var(--text-primary);
+            color: var(--bg-color);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 24px;
+            transition: opacity 0.2s;
+        }
+
+        .github-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container detail-page">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+        <header class="project-header">
+            <h1>AI Resume Screener</h1>
+        </header>
+
+        <section class="content-block">
+            <h2>What It Does</h2>
+            <p>The AI Resume Screener is designed to automate the initial stage of the hiring process. It extracts text from multiple resumes (supporting .docx format) and compares them against a target job description to rank candidates by relevance.</p>
+        </section>
+
+        <section class="content-block">
+            <h2>Core Methodology</h2>
+            <ul>
+                <li><strong>TF-IDF Training</strong>: Learned on a corpus of professional documents to identify key skills and terminology.</li>
+                <li><strong>Cosine Similarity</strong>: Measures the mathematical distance between the resume vector and the job description vector to calculate a "match percentage".</li>
+                <li><strong>Skill Overlap Analysis</strong>: Identifies specific tech stacks and keywords present in both the candidate's profile and the requirement.</li>
+                <li><strong>Dynamic Classification</strong>: Automatically labels candidates as <strong>Fit</strong>, <strong>Maybe</strong>, or <strong>Reject</strong> based on configurable similarity thresholds.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Key Functionalities</h2>
+            <ul>
+                <li>Batch processing of directory-hosted resumes.</li>
+                <li>Support for modern document formats through <code>python-docx</code>.</li>
+                <li>Clean CLI output with sorted rankings and match scores.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Stack & Architecture</h2>
+            <ul class="tech-list">
+                <li class="tech-tag">Python</li>
+                <li class="tech-tag">scikit-learn</li>
+                <li class="tech-tag">python-docx</li>
+                <li class="tech-tag">TF-IDF Vectorization</li>
+                <li class="tech-tag">Cosine Similarity</li>
+            </ul>
+        </section>
+
+        <footer style="margin-top: 80px; padding-top: 24px; border-top: 1px solid rgba(129, 250, 76, 0.1);">
+            <a href="https://github.com/MN012/ai-resume-screener" target="_blank" class="github-btn">View Full Project on GitHub</a>
+            <p style="font-size: 12px; color: var(--text-secondary); margin-top: 24px;">License: MIT</p>
+        </footer>
+    </div>
+</body>
+
+</html>

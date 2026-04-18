@@ -15,7 +15,31 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container main-layout">
+        <aside class="profile-card">
+            <div class="social-group">
+                <div class="circular-img">
+                    <img src="data/profile.jpg" alt="Matteo Negri">
+                </div>
+                <a href="https://www.linkedin.com/in/matteo-negri-60097131b/" target="_blank" class="sidebar-btn linkedin">
+                    LinkedIn
+                </a>
+            </div>
+
+            <blockquote class="profile-quote">
+                "Passionate about building intelligent systems at the intersection of AI and finance."
+            </blockquote>
+
+            <div class="social-group">
+                <div class="circular-img">
+                    <img src="data/mclaren.png" alt="GitHub Image">
+                </div>
+                <a href="https://github.com/MN012" target="_blank" class="sidebar-btn github">
+                    GitHub
+                </a>
+            </div>
+        </aside>
+
         <header class="hero">
             <h1 class="name-title">Matteo Negri</h1>
             <h2 class="subtitle">Undergraduate in Computer Science at City University</h2>
@@ -40,90 +64,36 @@
                     <h3>Contact Information</h3>
                     <div class="links-container">
                         <a href="mailto:matteo.negri@city.ac.uk" class="btn">Email</a>
-                        <a href="https://www.linkedin.com/in/matteo-negri-60097131b/" target="_blank"
-                            class="btn">LinkedIn</a>
-                        <a href="https://github.com/MN012" target="_blank" class="btn">GitHub</a>
                     </div>
                 </section>
             </div>
 
-            <!-- PROJECTS Tab -->
             <div class="tab-panel" id="tab-projects">
-                <section class="content-section">
-                    <h2><a href="https://github.com/MN012/Anomaly-Stock-Detection-System" target="_blank">Anomaly
-                            Detection in Financial Time Series</a></h2>
-                    <br>
-                    <p>
-                        Predicting next-day returns for Ford Motor Company stock using Z-scores, Isolation Forest,
-                        residual analysis and LSTM neural networks on 39 years of daily price data.
-                    </p>
+                <div class="project-list">
+                    <a href="project-anomaly.html" class="project-item">
+                        <h2>Anomaly Detection in Financial Time Series</h2>
+                        <p>Predicting stock anomalies using Z-scores, Isolation Forest, and LSTM neural networks on 39
+                            years of price data.</p>
+                    </a>
 
-                    <img src="data/anomaly.png" alt="Anomaly Detection">
-                    <br>
-                    <p>
-                        This above is the plotted result of the Z-score, Isolation Forest and Residual Anomaly
-                        Detection.
-                    </p>
-                    <br>
-                    <ul class="stats-list">
-                        <li><b>IC:</b> 0.072</li>
-                        <li><b>Sharpe:</b> 0.37</li>
-                        <li><b>Stack:</b> Python, TensorFlow, LSTM</li>
-                    </ul>
-                </section>
+                    <a href="project-fake-news.html" class="project-item">
+                        <h2>Fake News Classifier</h2>
+                        <p>NLP-powered classification of news as "FAKE" or "REAL" using TF-IDF and Linear Support Vector
+                            Classifiers.</p>
+                    </a>
 
-                <section class="content-section">
-                    <h2><a href="https://github.com/MN012/Fake-News-Classifier-Project" target="_blank">Fake News
-                            Classifier</a></h2>
-                    <br>
-                    <p>
-                        Classifying news articles as "FAKE" or "REAL" using NLP techniques and a Linear Support
-                        Vector Classifier trained on labelled news data.
-                    </p>
-                    <ul class="stats-list">
-                        <li><b>Stack:</b> Python, scikit-learn, NLTK</li>
-                        <li><b>Method:</b> TF-IDF + Linear SVC</li>
-                    </ul>
-                </section>
+                    <a href="project-resume-screener.html" class="project-item">
+                        <h2>AI Resume Screener</h2>
+                        <p>CLI tool comparing resumes against job descriptions using TF-IDF vectorization and cosine
+                            similarity.</p>
+                    </a>
 
-                <section class="content-section">
-                    <h2><a href="https://github.com/MN012/ai-resume-screener" target="_blank">AI Resume Screener</a>
-                    </h2>
-                    <br>
-                    <p>
-                        A CLI tool that compares resumes against job descriptions using TF-IDF vectorization and
-                        cosine similarity to produce a match score and extract overlapping skills.
-                    </p>
-                    <ul class="stats-list">
-                        <li><b>Stack:</b> Python, scikit-learn, python-docx</li>
-                        <li><b>Output:</b> Fit / Maybe / Reject classification</li>
-                    </ul>
-                </section>
-
-                <section class="content-section">
-                    <h2><a href="https://github.com/MN012/Python-Reinforcement-Learning-Trading-Bot" target="_blank">RL
-                            Trading Bot</a></h2>
-                    <br>
-                    <p>
-                        A reinforcement learning agent trained with PPO on 8 years of AAPL data to autonomously
-                        buy, hold, or sell stock. Achieved a 12.5% return on unseen test data, growing a $10,000
-                        portfolio to $11,250.96.
-                    </p>
-
-                    <img src="data/python trading bot.png" alt="Reinforcement Learning Trading Bot">
-                    <br>
-                    <p>
-                        The above chart shows the agent's buy/sell decisions overlaid on price data, with portfolio
-                        growth and technical indicators (RSI, MACD, Bollinger Bands).
-                    </p>
-                    <br>
-                    <ul class="stats-list">
-                        <li><b>Return:</b> 12.5% on unseen data</li>
-                        <li><b>Stack:</b> Python, Stable-Baselines3, Gymnasium, yfinance</li>
-                        <li><b>Method:</b> PPO + RSI, MACD, Bollinger Bands, SMA/EMA50</li>
-                    </ul>
-                </section>
-
+                    <a href="project-trading-bot.html" class="project-item">
+                        <h2>Reinforcement Learning Trading Bot</h2>
+                        <p>Autonomous trading agent trained with PPO on 10 years of AAPL data, achieving 12.5% return on
+                            unseen test sets.</p>
+                    </a>
+                </div>
             </div>
         </main>
 
